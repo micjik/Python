@@ -7,7 +7,7 @@ print(x)
 
 y = x + 3 # get the value of x and read the value in your code
 # it will create a variable y in your memory
-# it will access the variable memory and check the value and read it to our code
+# it will access the variable in the memory and check the value and read it to our code
 # variables make updates super easy
 name = "Geovanna"
 language = "javascript" 

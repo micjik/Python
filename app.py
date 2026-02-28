@@ -9,5 +9,5 @@ x = 10
 
 x = 9 # final exam score *inline comment*
 # Comments make code understandable, readable and professional
-# Most used function in python
-# Print
+# Print is the Most used built-in function in python
+
