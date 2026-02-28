@@ -115,3 +115,6 @@ float()             3 * 2          ceil()        cos()
 complex()           3 / 2          floor()       log()
                     3 // 2         trunc()
                     3 % 2
+
+Error:
+string index out of range => it means it cannot access the index in that string
