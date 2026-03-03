@@ -1,5 +1,5 @@
 # if defines the first condition
-# onely one if
+# only one if
 # starts with if
 # required
 #can standalone

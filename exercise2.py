@@ -32,11 +32,11 @@ else:
 # must include at least 1 uppercase
 # must include at least 1 lowercase
 # must not be same as the email
-# must not contain ant spaces
+# must not contain any spaces
 # must start and end with letter or digit
 
-password = ""
-email = ""
+password = "Darasimi8"
+email = "micjik50@gmail.com"
 #cleaning the string
 password = password.strip()
 
@@ -44,7 +44,7 @@ if password == "":
     print("password should not be empty")
 if len(password) < 8:
     print("password must contain at least 8 characters")
-if not(any(char.issuper() for char in password)):
+if not(any(char.isupper() for char in password)):
     print("password must contain an uppercase character")
 if not(any(char.islower() for char in password)):
     print("Password must contain atleast one lower case")
@@ -52,7 +52,7 @@ if password == email:
     print("password cannot have the same value as email")
 if " " in password:
     print("password should not contain spaces")
-if password[0].isalnum() and password[-1].isalnum():
+if not(password[0].isalnum() and password[-1].isalnum()):
     print("password must start or end with string or number")
 else:
     print("password is valid")
