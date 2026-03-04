@@ -1,7 +1,6 @@
 # while condition:
 # do something
-#unknown times
-# While 
+#unknown times# While 
 # Condition classical one
 # True
 i = 1 # initialization
