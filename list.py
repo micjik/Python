@@ -130,16 +130,103 @@ matrix.insert(3, (['j', 'h', 'k']))
 ## how to remove item from the list
 # duplicate, bad data and old data
 letters = ['a', 'b', 'c']
-letters.clear() # remove everything
+#letters.clear() # remove everything
 print(letters)
 letters.remove('a') 
 removed = letters.pop() # changing my list and return the removed value
-removed = letters.pop(1) # specify index number to remove
+#removed = letters.pop(1) # specify index number to remove
 matrix. remove(['a', 'b', 'c'])
 #matrix.pop()
-matrix[1].remove('e')
+#matrix[1].remove('e')
 matrix[-1].pop(0)
 matrix[0].pop()
 
+# update
+letters = ['a', 'b', 'c', 'd']
+letters[0] = 'x'
+letters[1] = 'y'
+print(type(letters))
 
+# how to sort 
+# Rank by price
+letters = ['c', 'a', 'b']
+print(letters.sort())
+letters.sort(reverse = True)
 
+# With sort you are changing the original list
+# while with sorted you are making a copy of the original list
+
+letters = ['c', 'a', 'b']
+new_list = sorted(letters)
+print('original List:', letters)
+print('Sorted List:', new_list)
+
+## Reverse
+letters = ['c', 'a', 'b']
+letters.reverse()
+
+# reversed # make a copy of the original 
+
+## copying a data in python
+#Reference
+# shallow copy
+# Deep copy
+# copying list
+
+letters = ['c', 'a', 'b']
+letters_copy = letters
+letters_copy.append('z')
+print('original:', letters)
+print('copying:', letters_copy) # it will affect the original list
+#instead use copy
+letters_copy = letters.copy()
+
+matrix = [
+    ['a', 'b'],
+    ['c', 'd']
+]
+matrix_copy = matrix.copy()
+matrix.pop()
+matrix_copy[0].append('z')
+print('original:', matrix)
+print('copy: ', matrix_copy)
+
+# the copy() method is a shallow copy you only get a copy for the top level which is the first level
+# if you do anything to the deep level it will affect both original and copy one
+# to be able to use the deep copy, you need to import copy
+import copy
+matrix = [
+    ['a', 'b'],
+    ['c', 'd']
+]
+matrix_copy = copy.deepcopy(matrix)
+matrix.pop()
+matrix_copy[0].append('z')
+print('original:',  matrix)
+print('copy: ', matrix_copy)
+# another method from the import copy is just copy which is just like the shallow copy
+matrix_copy = copy.copy(matrix) # shallow copy
+## copy.copy() is more general that list.copy(), not limited to lists
+original = [
+    ['a', 'b'],
+    ['c', 'd']
+]
+#Assignment
+copy = original
+print("Same object", original is copy, "\n")
+
+#Shallow copy
+copy2 = original.copy()
+print("same object:", original is copy2)
+print("Shared Lists", original[0] is copy[0], "\n")
+
+# deep copy
+copy3 = original
+print("Same Object", original is copy3)
+print("shared list", original[0] is copy3[0], "\n")
+
+# How to Copy
+# Avoid using Assignment Operator => Risky & Confusing
+# Use .copy() for simple, flat lists
+# use copy.deepcopy() for nested lists
+# always make extra copy for Experiments/Tests
